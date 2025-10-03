@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI時代の経営コンサルティング：未来への羅針盤</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-line::after {
+            content: '▼';
+            display: block;
+            text-align: center;
+            color: #F28F3B;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .flow-card {
+            border-left: 4px solid #F28F3B;
+        }
+    </style>
+</head>
+<body class="text-[#342E37]">
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#772D8B] mb-4">AI時代の経営コンサルティング</h1>
+            <p class="text-xl md:text-2xl text-[#342E37]">未来への羅針盤：変化の本質と求められる新たな価値</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <section class="md:col-span-2 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#00A6A6] mb-4 text-center">AIによるディスラプションの現状</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-8">生成AIは、情報収集、データ分析、報告書作成といった従来のコンサルティング業務を劇的に効率化し、その役割を根本から変えようとしています。これは脅威ではなく、コンサルタントがより高次の価値提供に集中するための絶好の機会です。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="text-7xl font-bold text-[#F2385A]">45%</div>
+                        <p class="text-xl font-semibold mt-2">のコンサルティング業務が</p>
+                        <p class="text-lg text-gray-600">AIによる自動化の可能性を持つ</p>
+                        <p class="text-sm text-gray-500 mt-2">(出典: 業界分析レポートに基づく推定値)</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-center mb-2">自動化ポテンシャルの高い業務領域</h3>
+                        <p class="text-center text-gray-600 mb-4">特に定型的な分析やリサーチ業務は、AIの得意分野です。これにより、コンサルタントはより戦略的な示唆の抽出に時間を割けるようになります。</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="automationChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#00A6A6] mb-2 text-center">コンサルティング・プロセスの変革</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-8">AIの活用は、プロジェクトの進め方を「直線的」から「反復的・協調的」なプロセスへと進化させます。仮説検証のサイクルが高速化し、クライアントを巻き込んだ、より深いレベルでの共創が実現します。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-center text-[#772D8B] mb-4">従来型プロセス</h3>
+                        <div class="space-y-4">
+                            <div class="flow-card bg-gray-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">1. データ収集と分析</h4>
+                                <p class="text-sm text-gray-600">数週間を要する手作業での市場調査とデータ整理</p>
+                            </div>
+                            <div class="flow-card bg-gray-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">2. 仮説構築</h4>
+                                <p class="text-sm text-gray-600">分析結果に基づく限定的な仮説立案</p>
+                            </div>
+                            <div class="flow-card bg-gray-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">3. 報告と提言</h4>
+                                <p class="text-sm text-gray-600">静的な報告書による最終提案</p>
+                            </div>
+                            <div class="flow-card bg-gray-50 p-4 rounded-md">
+                                <h4 class="font-bold">4. 実行支援</h4>
+                                <p class="text-sm text-gray-600">限定的な関与での実行サポート</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-center text-[#F2385A] mb-4">AI活用型プロセス</h3>
+                        <div class="space-y-4">
+                            <div class="flow-card bg-orange-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">1. AIによる高速分析</h4>
+                                <p class="text-sm text-gray-600">リアルタイムデータとAIによる多角的な初期分析 (数日)</p>
+                            </div>
+                            <div class="flow-card bg-orange-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">2. 協調的なシナリオプランニング</h4>
+                                <p class="text-sm text-gray-600">AIの示唆を基にクライアントと複数の戦略シナリオを共創</p>
+                            </div>
+                            <div class="flow-card bg-orange-50 p-4 rounded-md flow-line">
+                                <h4 class="font-bold">3. 動的シミュレーション</h4>
+                                <p class="text-sm text-gray-600">AIモデルを用いた戦略のインパクト予測と継続的な軌道修正</p>
+                            </div>
+                            <div class="flow-card bg-orange-50 p-4 rounded-md">
+                                <h4 class="font-bold">4. 組織への実装と変革推進</h4>
+                                <p class="text-sm text-gray-600">変革管理とAIツール導入を通じた組織能力の向上支援</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#00A6A6] mb-4 text-center">未来のコンサルタントに必須のスキルセット</h2>
+                <p class="text-lg text-center text-gray-600 mb-6">これからのコンサルタントには、AIには真似のできない人間ならではの能力が強く求められます。分析能力だけでなく、構想力や共感力、そして変革を導くリーダーシップが価値の源泉となります。</p>
+                <div class="chart-container">
+                    <canvas id="skillRadarChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#00A6A6] mb-4 text-center">新たなコンサルティング市場の萌芽</h2>
+                <p class="text-lg text-center text-gray-600 mb-6">AI時代は、新たなコンサルティング需要を生み出します。特に、企業のAI導入戦略や、それに伴う組織変革、倫理規定の策定などが主要なサービス領域として急成長すると予測されます。</p>
+                <div class="chart-container">
+                    <canvas id="marketGrowthChart"></canvas>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-300">
+            <p class="text-lg font-bold text-[#772D8B]">結論：AIは「代替」ではなく「増幅器」</p>
+            <p class="text-gray-600 mt-2 max-w-3xl mx-auto">AI時代の経営コンサルティングは、単なる情報提供者から、クライアントの変革を共に実現する「戦略的パートナー」へと進化します。AIを使いこなし、人間ならではの洞察力と実行力を提供できるコンサルタントこそが、未来をリードする存在となるでしょう。</p>
+        </footer>
+    </div>
+
+    <script>
+        const FONT_COLOR = '#342E37';
+        const GRID_COLOR = '#e0e0e0';
+        const PALETTE = {
+            blue: '#00A6A6',
+            purple: '#772D8B',
+            orange: '#F28F3B',
+            red: '#F2385A',
+            dark: '#342E37'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += " " + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: FONT_COLOR,
+                        font: { size: 14 }
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('automationChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['市場・競合リサーチ', 'データ分析・可視化', '報告書・資料作成', '戦略的示唆の抽出', 'クライアントとの対話'],
+                datasets: [{
+                    label: '自動化ポテンシャル',
+                    data: [70, 80, 60, 20, 10],
+                    backgroundColor: [PALETTE.blue, PALETTE.orange, PALETTE.red, PALETTE.purple, '#cccccc'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipTitleCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: FONT_COLOR,
+                            font: { size: 12 },
+                            boxWidth: 20
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const skillLabels = [
+            'AI活用・データリテラシー', 
+            '戦略的構想力', 
+            '変革マネジメント', 
+            'クライアントとの共創力', 
+            ['倫理観・', 'ガバナンス設計力'],
+            '創造的問題解決力'
+        ].map(label => Array.isArray(label) ? label : (label.length > 16 ? wrapLabel(label, 15) : label));
+
+        new Chart(document.getElementById('skillRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: skillLabels,
+                datasets: [{
+                    label: '未来のコンサルタント',
+                    data: [85, 95, 90, 100, 80, 95],
+                    backgroundColor: 'rgba(242, 56, 90, 0.2)',
+                    borderColor: PALETTE.red,
+                    pointBackgroundColor: PALETTE.red,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: PALETTE.red
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipTitleCallback,
+                scales: {
+                    r: {
+                        angleLines: { color: GRID_COLOR },
+                        grid: { color: GRID_COLOR },
+                        pointLabels: {
+                            color: FONT_COLOR,
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                            color: FONT_COLOR,
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            stepSize: 20
+                        },
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('marketGrowthChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2025年', '2027年', '2029年'],
+                datasets: [{
+                    label: '従来型コンサルティング',
+                    data: [100, 90, 80],
+                    backgroundColor: PALETTE.blue,
+                }, {
+                    label: 'AI関連コンサルティング',
+                    data: [20, 50, 90],
+                    backgroundColor: PALETTE.orange,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipTitleCallback,
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: { display: false },
+                        ticks: { color: FONT_COLOR }
+                    },
+                    y: {
+                        stacked: true,
+                        grid: { color: GRID_COLOR },
+                        ticks: { color: FONT_COLOR },
+                        title: {
+                            display: true,
+                            text: '市場規模 (指数)',
+                            color: FONT_COLOR
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

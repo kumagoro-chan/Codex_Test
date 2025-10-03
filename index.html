@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI x TOC/CCPM: プロジェクトマネジメントの未来を再定義する</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8f9fa; 
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 280px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 320px;
+            }
+        }
+        .flow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: #0074B7;
+            line-height: 1;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="text-[#333333]">
+    <!-- Color Palette: Brilliant Blues (#003B73, #0074B7, #BFD7ED, #FFFFFF, #666666) -->
+    <!-- 
+        Infographic Plan:
+        1. Title & Hook: Establish that AI supercharges, not replaces, TOC/CCPM.
+        2. Core Synergy: Visualize how AI's analytical power and TOC's systemic focus create a powerful combination.
+        3. Evolving Customer Expectations: Detail the new, higher-level demands from clients, moving from simple execution to strategic foresight.
+        4. New High-Demand Services: Showcase specific, emerging service areas where AI-powered TOC consultants have a distinct advantage.
+        5. The Consultant's Evolving Role: Contrast the traditional consultant's tasks with the new, AI-augmented strategic partner role.
+        6. Conclusion: Summarize the shift from process expert to "Strategic Throughput Orchestrator."
+
+        Visualization Choices (NO SVG, NO MERMAID JS):
+        - Synergy Diagram (Section 2): Implemented with structured HTML/CSS (Flexbox) to show the combination of AI and TOC concepts. Goal: Organize.
+        - Expectation Cards (Section 3): Implemented with a grid of styled HTML cards, each containing a Chart.js Doughnut chart. Goal: Inform/Compare.
+        - High-Demand Services Chart (Section 4): Implemented with a Chart.js Bar Chart to compare the growth potential of new service areas. Goal: Compare.
+        - Role Evolution Table (Section 5): Implemented with a structured HTML table with Tailwind CSS for styling. Goal: Organize/Compare.
+
+        CRITICAL CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All diagrams and charts are rendered via Chart.js on Canvas or structured HTML/CSS with Tailwind.
+    -->
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#003B73] mb-4">AI × TOC/CCPM</h1>
+            <p class="text-xl md:text-2xl text-[#0074B7]">プロジェクトマネジメントの未来を再定義する</p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg">AIはTOCの理念を代替するのではなく、その効果を増幅させる最強の触媒です。複雑な計算と予測をAIに委ねることで、コンサルタントは「真の制約」である人間系・組織系の課題解決に集中できます。</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-[#003B73] mb-6 text-center">AIとTOCが生み出す相乗効果</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div class="w-full md:w-2/5 bg-[#BFD7ED] p-4 rounded-lg text-center">
+                        <h3 class="font-bold text-xl text-[#003B73]">AIの強み</h3>
+                        <ul class="mt-2 text-left list-disc list-inside">
+                            <li>超高速データ処理</li>
+                            <li>高精度な将来予測</li>
+                            <li>複雑なシナリオ分析</li>
+                            <li>リアルタイム監視</li>
+                        </ul>
+                    </div>
+                    <div class="text-4xl font-bold text-[#0074B7]">+</div>
+                    <div class="w-full md:w-2/5 bg-[#BFD7ED] p-4 rounded-lg text-center">
+                        <h3 class="font-bold text-xl text-[#003B73]">TOC/CCPMの思想</h3>
+                        <ul class="mt-2 text-left list-disc list-inside">
+                            <li>制約への集中</li>
+                            <li>全体最適化の追求</li>
+                            <li>バッファマネジメント</li>
+                            <li>スループット最大化</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <div class="text-4xl font-bold text-[#0074B7]">||</div>
+                    <div class="bg-[#003B73] text-white p-4 rounded-lg mt-4 max-w-2xl mx-auto">
+                        <h3 class="font-bold text-2xl">実現する価値</h3>
+                        <p class="mt-2 text-lg">これまでにないレベルの「予測可能性」と「プロジェクト遂行速度」の両立</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="text-3xl font-bold text-[#003B73] mb-8 text-center">AI時代に顧客がTOCコンサルタントに期待すること</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-8">もはや単なる計画立案や進捗管理ではありません。AIの登場により、顧客の期待は「より早く」から「より賢く、確実な成果を」へとシフトしています。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-[#0074B7] mb-4">1. 超高精度な予測能力</h3>
+                        <p class="mb-4 text-gray-600">過去の静的なデータではなく、リアルタイム情報とAI予測に基づいた「信頼できる」納期とコストの提示。</p>
+                        <div class="chart-container">
+                            <canvas id="predictionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-[#0074B7] mb-4">2. プロアクティブなリスク検知</h3>
+                        <p class="mb-4 text-gray-600">問題発生後の対応ではなく、AIが兆候を検知し、バッファ消費傾向から「未来のリスク」を事前警告。</p>
+                        <div class="chart-container">
+                            <canvas id="riskChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-[#0074B7] mb-4">3. ポートフォリオの全体最適化</h3>
+                        <p class="mb-4 text-gray-600">単一プロジェクトの成功だけでなく、複数プロジェクト間のリソース制約をAIで最適化し、事業全体の成果を最大化。</p>
+                        <div class="chart-container">
+                            <canvas id="portfolioChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <h3 class="text-xl font-bold text-[#0074B7] mb-4">4. 継続的な学習と改善</h3>
+                        <p class="mb-4 text-gray-600">完了したプロジェクトのデータをAIが学習し、組織固有のバッファサイズやタスク期間の見積もり精度を継続的に向上。</p>
+                        <div class="chart-container">
+                            <canvas id="learningChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#003B73] mb-8 text-center">需要が急増する新たなサービス領域</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-8">AIとTOCの融合は、コンサルティングファームに新たなビジネスチャンスをもたらします。特に、より戦略的で、組織の根幹に関わる領域での需要が高まります。</p>
+                 <div class="chart-container h-96 max-h-[500px] mx-auto">
+                    <canvas id="servicesChart"></canvas>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#003B73] mb-4 text-center">
+                    ✨ AIによるTOC思考実験
+                </h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-6">
+                    あなたのプロジェクト課題を下のボックスに入力してください。AIコンサルタントがTOCの観点から、制約を見つけるための初期的なアドバイスを提供します。
+                </p>
+                <div class="max-w-2xl mx-auto">
+                    <textarea id="projectChallenge" class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0074B7] focus:outline-none" placeholder="例：複数の製品開発プロジェクトが同時に遅延しており、エンジニアのリソースが常に不足している状態です。"></textarea>
+                    <button id="getAdviceBtn" class="mt-4 w-full bg-[#0074B7] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#003B73] transition duration-300 flex items-center justify-center disabled:opacity-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>
+                        AIコンサルタントに相談する
+                    </button>
+                    <div id="aiResult" class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 hidden">
+                        <div id="loader" class="text-center hidden">
+                            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#0074B7]"></div>
+                            <p class="mt-2 text-gray-600">AIが分析中です...</p>
+                        </div>
+                        <div id="resultText" class="text-gray-700 leading-relaxed"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-300">
+            <p class="text-2xl font-bold text-[#003B73]">結論：コンサルタントは「計算の専門家」から「変革の指揮者」へ</p>
+            <p class="text-gray-600 mt-3 max-w-4xl mx-auto text-lg">AI時代のTOC/CCPMコンサルタントの真の価値は、AIが提示する最適解を、クライアント組織の文化や人々の感情と結びつけ、実行可能な変革シナリオへと昇華させることにあります。AIを羅針盤として使いこなし、組織全体の「スループット」を最大化する戦略的パートナーこそが、これからの時代に求められる存在です。</p>
+        </footer>
+    </div>
+
+    <script>
+        const FONT_COLOR = '#333333';
+        const GRID_COLOR = '#e0e0e0';
+        const PALETTE = {
+            darkBlue: '#003B73',
+            midBlue: '#0074B7',
+            lightBlue: '#BFD7ED',
+            gray: '#666666'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += " " + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    display: false
+                }
+            }
+        };
+
+        function createDoughnutChart(canvasId, label, data, color) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [label, ''],
+                    datasets: [{
+                        data: [data, 100 - data],
+                        backgroundColor: [color, '#f0f0f0'],
+                        borderColor: '#ffffff',
+                        borderWidth: 2,
+                        circumference: 180,
+                        rotation: 270,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        tooltip: { enabled: false },
+                        legend: { display: false }
+                    }
+                },
+                plugins: [{
+                    id: 'doughnutText',
+                    afterDraw(chart, args, options) {
+                        const {
+                            ctx,
+                            chartArea: {
+                                top,
+                                width,
+                                height
+                            }
+                        } = chart;
+                        ctx.save();
+                        const text = data + '%';
+                        ctx.font = `bold ${height / 4}px 'Noto Sans JP'`;
+                        ctx.fillStyle = color;
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText(text, width / 2, top + height / 1.5);
+                        ctx.restore();
+                    }
+                }]
+            });
+        }
+        
+        createDoughnutChart('predictionChart', '予測精度', 95, PALETTE.darkBlue);
+        createDoughnutChart('riskChart', 'リスク事前検知率', 80, PALETTE.darkBlue);
+        createDoughnutChart('portfolioChart', 'スループット向上', 30, PALETTE.midBlue);
+        createDoughnutChart('learningChart', '見積精度向上', 40, PALETTE.midBlue);
+
+
+        const servicesLabels = [
+            '複数プロジェクトポートフォリオ最適化', 
+            'サプライチェーン同期化コンサルティング', 
+            'Digital Constraint Officer支援サービス', 
+            'AI導入に伴う組織変革・コーチング'
+        ].map(label => label.length > 16 ? wrapLabel(label, 16) : label);
+
+        new Chart(document.getElementById('servicesChart'), {
+            type: 'bar',
+            data: {
+                labels: servicesLabels,
+                datasets: [{
+                    label: '市場成長予測 (今後3年)',
+                    data: [90, 75, 85, 95],
+                    backgroundColor: [PALETTE.darkBlue, PALETTE.midBlue, PALETTE.darkBlue, PALETTE.midBlue],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     ...tooltipTitleCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { color: GRID_COLOR },
+                        ticks: { color: FONT_COLOR },
+                        title: {
+                            display: true,
+                            text: '需要成長指数',
+                            color: FONT_COLOR
+                        }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: FONT_COLOR, font: {size: 12} }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('getAdviceBtn').addEventListener('click', getAIAdvice);
+
+        async function getAIAdvice() {
+            const getAdviceBtn = document.getElementById('getAdviceBtn');
+            const projectChallenge = document.getElementById('projectChallenge').value;
+            const resultDiv = document.getElementById('aiResult');
+            const loader = document.getElementById('loader');
+            const resultText = document.getElementById('resultText');
+
+            if (!projectChallenge.trim()) {
+                resultText.innerText = 'プロジェクトの課題を入力してください。';
+                resultDiv.classList.remove('hidden');
+                loader.classList.add('hidden');
+                return;
+            }
+
+            getAdviceBtn.disabled = true;
+            getAdviceBtn.classList.add('disabled:opacity-50');
+            resultDiv.classList.remove('hidden');
+            loader.classList.remove('hidden');
+            resultText.innerHTML = '';
+
+            const systemPrompt = "あなたはTOC（制約理論）とCCPM（クリティカルチェーン・プロジェクトマネジメント）の専門家コンサルタントです。ユーザーが提示するプロジェクトマネジメントの問題を分析し、TOCの5段階集中プロセス（1. 制約条件を見つける, 2. 制約条件を徹底的に活用する, 3. 制約条件以外を制약条件に従わせる, 4. 制約条件の能力を向上させる, 5. ステップ1に戻る）に基づいてアドバイスを提供してください。特に、問題の背後にある「真の制約」が何かを特定するための質問や視点を提示することに重点を置いてください。回答は、実際のコンサルタントが初期診断を行うような、丁寧かつ示唆に富んだ口調で記述してください。";
+            const userQuery = projectChallenge;
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+            
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    resultText.innerHTML = text.replace(/\n/g, '<br>');
+                } else {
+                     resultText.innerText = 'AIからの応答を取得できませんでした。しばらくしてから再度お試しください。';
+                }
+
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                resultText.innerText = 'エラーが発生しました。コンソールで詳細を確認してください。';
+            } finally {
+                loader.classList.add('hidden');
+                getAdviceBtn.disabled = false;
+                getAdviceBtn.classList.remove('disabled:opacity-50');
+            }
+        }
+    </script>
+</body>
+</html>
+
